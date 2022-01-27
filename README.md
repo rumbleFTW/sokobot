@@ -10,5 +10,5 @@ Learn and have fun.
 Cheers!
 :D
 
-![Alt text](https://imgur.com/a4jlgnN "Game Screen")
-![Alt text](https://imgur.com/kHPW4G6 "Terminal outputs")
+![Alt text](https://imgur.com/a4jlgnN.png "Game Screen")
+![Alt text](https://imgur.com/kHPW4G6.png "Terminal outputs")
