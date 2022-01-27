@@ -9,3 +9,6 @@ I was being too picky regarding the sprite designs (I redrew the sprites a dozen
 Learn and have fun.
 Cheers!
 :D
+
+![Alt text](https://imgur.com/a4jlgnN "Game Screen")
+![Alt text](https://imgur.com/kHPW4G6 "Terminal outputs")
