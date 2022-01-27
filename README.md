@@ -10,5 +10,8 @@ Learn and have fun.
 Cheers!
 :D
 
+<h1>Game Screen</h1>
 ![Alt text](https://imgur.com/a4jlgnN.png "Game Screen")
-![Alt text](https://imgur.com/kHPW4G6.png "Terminal outputs")
+
+<h1>Terminal Output</h1>
+![Alt text](https://imgur.com/kHPW4G6.png "Terminal Output")
