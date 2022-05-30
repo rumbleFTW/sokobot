@@ -259,5 +259,4 @@ def startScreen():
                 end = True
         pygame.display.update()
 
-# startScreen()
 gameScreen(currLevel, levelIndex)
