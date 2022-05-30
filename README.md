@@ -1,4 +1,4 @@
-![Replit(Low performance)](https://replit.com/@rumbleFTW/sokobot#.replit)
+[Replit(Low performance)](https://replit.com/@rumbleFTW/sokobot#.replit)
 # SokoBot
 Full-Fledged Sokoban game with AI using Depth-First, Breadth-First strategies and A* Pathfinding with Manhattan distance as heuristics fn.
 
