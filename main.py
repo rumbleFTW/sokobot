@@ -1,4 +1,5 @@
 from threading import Thread
+import os
 import pygame
 import copy
 from levels import *
@@ -7,43 +8,46 @@ from depthFirstSearch import *
 from breadthFirstSearch import *
 from aStarManhattan import *
 
+
+APP_FOLDER = os.path.dirname( os.path.realpath( __file__ ) )+os.path.sep+'assets'
+
 levels = [l1, l2, l3, l4, l5, l6]
 levelIndex = 0
 currLevel = copy.deepcopy(levels[levelIndex])
 
-icon = pygame.image.load("assets\\icon.png")
-aStarBtn = pygame.image.load("assets\\aStarBtn.png")
-bfsBtn = pygame.image.load("assets\\bfsBtn.png")
-dfsBtn = pygame.image.load("assets\\dfsBtn.png")
+icon = pygame.image.load(os.path.join(APP_FOLDER, "icon.png"))
+aStarBtn = pygame.image.load(os.path.join(APP_FOLDER, "aStarBtn.png"))
+bfsBtn = pygame.image.load(os.path.join(APP_FOLDER, "bfsBtn.png"))
+dfsBtn = pygame.image.load(os.path.join(APP_FOLDER, "dfsBtn.png"))
 
-crate = pygame.image.load("assets\\crate.png")
-treasure = pygame.image.load("assets\\treasure.png")
+crate = pygame.image.load(os.path.join(APP_FOLDER, "crate.png"))
+treasure = pygame.image.load(os.path.join(APP_FOLDER, "treasure.png"))
 
-wb = pygame.image.load("assets\\wb.png")
-wl = pygame.image.load("assets\\wl.png")
-wr = pygame.image.load("assets\\wr.png")
-wt = pygame.image.load("assets\\wt.png")
-wb = pygame.image.load("assets\\wb.png")
-wlt = pygame.image.load("assets\\wlt.png")
-wlb = pygame.image.load("assets\\wlb.png")
-wrt = pygame.image.load("assets\\wrt.png")
-wrb = pygame.image.load("assets\\wrb.png")
+wb = pygame.image.load(os.path.join(APP_FOLDER, "wb.png"))
+wl = pygame.image.load(os.path.join(APP_FOLDER, "wl.png"))
+wr = pygame.image.load(os.path.join(APP_FOLDER, "wr.png"))
+wt = pygame.image.load(os.path.join(APP_FOLDER, "wt.png"))
+wb = pygame.image.load(os.path.join(APP_FOLDER, "wb.png"))
+wlt = pygame.image.load(os.path.join(APP_FOLDER, "wlt.png"))
+wlb = pygame.image.load(os.path.join(APP_FOLDER, "wlb.png"))
+wrt = pygame.image.load(os.path.join(APP_FOLDER, "wrt.png"))
+wrb = pygame.image.load(os.path.join(APP_FOLDER, "wrb.png"))
 
-wtb = pygame.image.load("assets\\wtb.png")
-wlr = pygame.image.load("assets\\wlr.png")
-w3l = pygame.image.load("assets\\w3l.png")
-w3r = pygame.image.load("assets\\w3r.png")
-w3t = pygame.image.load("assets\\w3t.png")
-w3b = pygame.image.load("assets\\w3b.png")
-w4 = pygame.image.load("assets\\w4.png")
-charS = pygame.image.load("assets\\charS.png")
+wtb = pygame.image.load(os.path.join(APP_FOLDER, "wtb.png"))
+wlr = pygame.image.load(os.path.join(APP_FOLDER, "wlr.png"))
+w3l = pygame.image.load(os.path.join(APP_FOLDER, "w3l.png"))
+w3r = pygame.image.load(os.path.join(APP_FOLDER, "w3r.png"))
+w3t = pygame.image.load(os.path.join(APP_FOLDER, "w3t.png"))
+w3b = pygame.image.load(os.path.join(APP_FOLDER, "w3b.png"))
+w4 = pygame.image.load(os.path.join(APP_FOLDER, "w4.png"))
+charS = pygame.image.load(os.path.join(APP_FOLDER, "charS.png"))
 
-tl = (pygame.image.load("assets\\tl1.png"),pygame.image.load("assets\\tl2.png"))
-td = (pygame.image.load("assets\\td1.png"),pygame.image.load("assets\\td2.png"))
-tls =(pygame.image.load("assets\\tls1.png"),pygame.image.load("assets\\tls2.png"))
-tds = (pygame.image.load("assets\\tds1.png"),pygame.image.load("assets\\tds2.png"))
-coin = (pygame.image.load("assets\\c1.png"), pygame.image.load("assets\\c2.png"), pygame.image.load("assets\\c3.png"), pygame.image.load("assets\\c4.png"), pygame.image.load("assets\\c5.png"), pygame.image.load("assets\\c6.png"), pygame.image.load("assets\\c7.png"), pygame.image.load("assets\\c8.png"))
-char = (pygame.image.load("assets\\char1.png"), pygame.image.load("assets\\char2.png"))
+tl = (pygame.image.load(os.path.join(APP_FOLDER, "tl1.png")),pygame.image.load(os.path.join(APP_FOLDER, "tl2.png")))
+td = (pygame.image.load(os.path.join(APP_FOLDER, "td1.png")),pygame.image.load(os.path.join(APP_FOLDER, "td2.png")))
+tls =(pygame.image.load(os.path.join(APP_FOLDER, "tls1.png")),pygame.image.load(os.path.join(APP_FOLDER, "tls2.png")))
+tds = (pygame.image.load(os.path.join(APP_FOLDER, "tds1.png")),pygame.image.load(os.path.join(APP_FOLDER, "tds2.png")))
+coin = (pygame.image.load(os.path.join(APP_FOLDER, "c1.png")), pygame.image.load(os.path.join(APP_FOLDER, "c2.png")), pygame.image.load(os.path.join(APP_FOLDER, "c3.png")), pygame.image.load(os.path.join(APP_FOLDER, "c4.png")), pygame.image.load(os.path.join(APP_FOLDER, "c5.png")), pygame.image.load(os.path.join(APP_FOLDER, "c6.png")), pygame.image.load(os.path.join(APP_FOLDER, "c7.png")), pygame.image.load(os.path.join(APP_FOLDER, "c8.png")))
+char = (pygame.image.load(os.path.join(APP_FOLDER, "char1.png")), pygame.image.load(os.path.join(APP_FOLDER, "char2.png")))
 animPtr = 0
 
 clock = pygame.time.Clock()
