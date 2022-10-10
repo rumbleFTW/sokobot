@@ -15,21 +15,21 @@ https://user-images.githubusercontent.com/85807431/194949704-3d8c9ced-650f-4fdc-
 ## Run in local machine
 
 1. Clone the repo
- 
- git clone https://github.com/rumbleFTW/sokobot.git
- 
+``` 
+git clone https://github.com/rumbleFTW/sokobot.git
+```
 2. Navigate to folder
-
+```
 cd sokobot
-
+```
 3. Install Pygame
-
+```
 pip install pygame
-
+```
 4. Run main.py
-
+```
 python main.py
-
+```
 
 ## Basics
 
