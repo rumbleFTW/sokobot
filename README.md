@@ -9,11 +9,8 @@ An indie Sokoban-esque game completely written in python.
 - [Levels database](https://sokoban.info)
 
 ## Demo:
-<figure class="video_container">
-  <video style="width: 720px; height: 576px;"style="width: 720px; height: 576px;" controls="true" poster="path/to/poster_image.png">
-    <source src="./assets/demo.mp4" type="video/mp4">
-  </video>
-</figure>
+
+https://user-images.githubusercontent.com/85807431/194949704-3d8c9ced-650f-4fdc-8991-a5b74b4af991.mp4
 
 ## Run in local machine
 
