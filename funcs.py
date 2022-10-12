@@ -16,17 +16,17 @@ def check(currLevel):
                 clear = False
     return clear
  
-def move(currLevel, vals):
-    if currLevel.matrix[currLevel.playerY+vals[1]][currLevel.playerX+vals[0]] == 0 or currLevel.matrix[currLevel.playerY+vals[1]][currLevel.playerX+vals[0]] == 2:
-        currLevel.playerY += vals[1]
-        currLevel.playerX += vals[0]
-        currLevel.timeLine.append(vals)
+def move(levelObj, vals):
+    if levelObj.matrix[levelObj.playerY+vals[1]][levelObj.playerX+vals[0]] == 0 or levelObj.matrix[levelObj.playerY+vals[1]][levelObj.playerX+vals[0]] == 2:
+        levelObj.playerY += vals[1]
+        levelObj.playerX += vals[0]
+        levelObj.timeLine.append(vals)
     else:
-        currLevel.matrix[currLevel.playerY+vals[1]][currLevel.playerX+vals[0]] -= 3
-        currLevel.matrix[currLevel.playerY+2*vals[1]][currLevel.playerX+2*vals[0]] += 3
-        currLevel.playerY += vals[1]
-        currLevel.playerX += vals[0]
-        currLevel.timeLine.append(vals)
+        levelObj.matrix[levelObj.playerY+vals[1]][levelObj.playerX+vals[0]] -= 3
+        levelObj.matrix[levelObj.playerY+2*vals[1]][levelObj.playerX+2*vals[0]] += 3
+        levelObj.playerY += vals[1]
+        levelObj.playerX += vals[0]
+        levelObj.timeLine.append(vals)
 
 def isLegal(currLevel, vals):
     if currLevel.matrix[currLevel.playerY+vals[1]][currLevel.playerX+vals[0]] == 1:
@@ -80,4 +80,3 @@ def manhattanDist(gameState, boxPos):                               #Manhattan d
             if gameState.matrix[i][j] == 2:
                 dist.append(abs(boxPos[0]-i)+abs(boxPos[1]-j))
     return dist
-
