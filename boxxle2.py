@@ -1,4 +1,4 @@
-from levels import level
+from level import level
 
 p1 = [[1, 1, 1, 1, 1, 6, 6, 6, 6],
       [1, 0, 0, 0, 1, 1, 1, 1, 1],
@@ -51,4 +51,4 @@ l3 = level(p3, (5, 5))
 l4 = level(p4, (1, 7))
 l5 = level(p5, (1, 4))
 
-boxxle2 = [l5, l3]
+boxxle2 = [l1, l2, l3, l4, l5]

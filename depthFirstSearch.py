@@ -1,9 +1,8 @@
-import collections
 import time
 import copy
 from funcs import *
 
-stack = collections.deque([])
+stack = []
 possibleMoves = ((0, 1), (1, 0), (0, -1), (-1, 0))
 stateHist = []
 solution = []
