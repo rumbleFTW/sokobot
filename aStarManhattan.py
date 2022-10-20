@@ -7,8 +7,7 @@ pq = PriorityQueue()
 possibleMoves = ((0, 1), (1, 0), (0, -1), (-1, 0))
 stateHist = []
 
-timeLimit = 30
-
+timeLimit = 32
 def aStarManhattan(gameState):
     hx = 0
     for i in range(0, gameState.rows):
