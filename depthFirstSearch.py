@@ -26,5 +26,5 @@ def depthFirstSearch(boardState):
                     stack.append(newState)
                     stateHist.append(newState)
     print("Time limit of", timeLimit, "secs exceeded")
-    return 0
+    return boardState
             

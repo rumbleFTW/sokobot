@@ -35,4 +35,4 @@ def aStarManhattan(gameState):
                     pq.put((hx, id(newState),newState))
                     stateHist.append(newState)
     print("Time limit of", timeLimit, "secs exceeded")
-    return 0
+    return gameState

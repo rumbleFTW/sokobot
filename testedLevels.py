@@ -1,4 +1,4 @@
-from level import level
+from level import Level
 
 p1 = [[1, 1, 1, 6, 6, 6],
       [1, 0, 2, 1, 6, 6],
@@ -51,11 +51,11 @@ p6 =[[6, 6, 1, 1, 1, 6, 6, 6],
       [6, 6, 6, 1, 1, 1, 6, 6]]
 
 
-l1 = level(p1, (3, 2))
-l2 = level(p2, (2, 3))
-l3 = level(p3, (4, 6))
-l4 = level(p4, (2, 1))
-l5 = level(p5, (2, 9))
-l6 = level(p6, (4, 4))
+l1 = Level(p1, (3, 2))
+l2 = Level(p2, (2, 3))
+l3 = Level(p3, (4, 6))
+l4 = Level(p4, (2, 1))
+l5 = Level(p5, (2, 9))
+l6 = Level(p6, (4, 4))
 
 testedLevels = [l1, l2, l3, l4, l5, l6]

@@ -1,6 +1,6 @@
 from threading import Thread
 import os
-from level import level
+from level import Level
 import pygame
 import copy
 from testedLevels import testedLevels
@@ -52,6 +52,7 @@ animPtr = 0
 clock = pygame.time.Clock()
 
 levels = []
+levelIndex = -1
 
 def render(currLevel, screen):
     '''
@@ -187,7 +188,7 @@ def automator(moves, state, screen):
         render(state, screen)
         pygame.display.update()
 
-def gameScreen(currLevel, levelIndex):
+def gameScreen(currLevel, levelIndex, levels):
     '''
     Main game function that will initiate the game loop.
     '''
@@ -300,7 +301,7 @@ def gameScreen(currLevel, levelIndex):
         render(currLevel, screen2)
         pygame.display.update()
 
-def startScreen():
+def startScreen(levelIndex,levels):
     end = False
     pygame.init()
     screen1 = pygame.display.set_mode((416, 416))
@@ -327,19 +328,19 @@ def startScreen():
                 mouse = pygame.mouse.get_pos()
 
                 if 105 <= mouse[0] <= 310  and 200 <= mouse[1] <= 232:
-                    levels = testedLevels
+                    levels = copy.deepcopy(testedLevels)
                     levelIndex = 0
                     currLevel = copy.deepcopy(levels[levelIndex])
-                    gameScreen(currLevel, levelIndex)
+                    gameScreen(currLevel, levelIndex, levels)
                     end = True
 
                 if 105 <= mouse[0] <= 310 and 250 <= mouse[1] <= 282:
-                    levels = boxxle2
-                    levelIndex = 0
+                    levels = copy.deepcopy(boxxle2)
                     currLevel = copy.deepcopy(levels[levelIndex])
-                    gameScreen(currLevel, levelIndex)
+                    print(id(levels))
+                    gameScreen(currLevel, levelIndex, levels)
                     end = True
 
         pygame.display.update()
 
-startScreen()
+startScreen(levelIndex, levels)

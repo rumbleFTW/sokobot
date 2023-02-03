@@ -1,4 +1,4 @@
-class level:
+class Level:
       def __init__(self, matrix, pos):
             self.matrix = matrix
             self.rows = len(matrix)
